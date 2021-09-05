@@ -24,7 +24,6 @@ function bestMove() {
 	}
 
 	return move;
-	// return { i: 1, j: 2 };
 }
 
 function minimax(board, isMaximising) {
@@ -50,6 +49,11 @@ function minimax(board, isMaximising) {
 
 					// reset board
 					board[i][j] = empty;
+
+					// alpha-beta pruning
+					if (bestScore == ai) {
+						return ai;
+					}
 				}
 			}
 		}
@@ -71,6 +75,11 @@ function minimax(board, isMaximising) {
 
 					// reset board
 					board[i][j] = empty;
+
+					// alpha-beta pruning
+					if (bestScore == human) {
+						return bestScore;
+					}
 				}
 			}
 		}
