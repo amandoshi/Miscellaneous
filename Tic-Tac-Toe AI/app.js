@@ -34,17 +34,6 @@ function setup() {
 function draw() {
 	// -------------------LOGIC-------------------
 
-	// ai move
-	if (currentPlayer == ai) {
-		// predict next move
-		const { i, j } = bestMove();
-
-		// move ai player
-		board[i][j] = ai;
-
-		toggleCurrentPlayer();
-	}
-
 	// check game over
 	const winner = getWinner(board);
 	if (winner != null) {
@@ -60,7 +49,19 @@ function draw() {
 		result.style("font-size", "32pt");
 
 		// end game
+		gameOver = true;
 		noLoop();
+	}
+
+	// ai move
+	if (currentPlayer == ai && !gameOver) {
+		// predict next move
+		const { i, j } = bestMove();
+
+		// move ai player
+		board[i][j] = ai;
+
+		toggleCurrentPlayer();
 	}
 
 	// -------------------DRAW-------------------
