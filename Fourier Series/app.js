@@ -1,8 +1,3 @@
-// let a = 0;
-// const r = 150;
-// let wave = new Array();
-// let slider;
-
 let angle = 0;
 const size = 100;
 let slider;
