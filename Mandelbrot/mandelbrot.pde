@@ -7,6 +7,12 @@ int maxIterations = 100;
 void setup() {
     size(1200, 800);
 
+    mandelbrot();
+}
+
+void draw() {}
+
+void mandelbrot() {
     loadPixels();
     for (int i = 0; i < width; i++) {
         for (int j = 0; j < height; j++) {
@@ -43,5 +49,17 @@ void setup() {
         }
     }
     updatePixels();
+}
+
+void keyPressed() {
+    if (key == CODED) {
+        if (keyCode == UP) {
+            maxIterations++;
+            mandelbrot();
+        } else if (keyCode == DOWN) {
+            maxIterations--;
+            mandelbrot();
+        }
+    }
 }
 
