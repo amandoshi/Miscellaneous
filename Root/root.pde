@@ -1,8 +1,9 @@
+int maxIterations = 30;
 int numWalkers = 3000;
+float radius = 3;
+
 PVector[] root;
 Walker[] walkers;
-float radius = 3;
-int maxIterations = 30;
 
 void setup() {
     size(500,500);
