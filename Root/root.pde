@@ -11,7 +11,7 @@ void setup() {
     root[0] = new PVector(width / 2, height / 2);
 
     walkers = new Walker[numWalkers];
-    for (int i = 0; i < numWalkers; i++) {
+    for (int i = 0; i < walkers.length; i++) {
         float x;
         float y;
         int state = floor(random(0,4));
@@ -41,7 +41,7 @@ void setup() {
 void draw() {
     // ----------------------LOGIC----------------------
     for (int iter = 0; iter < maxIterations; iter++) {
-        for (int i = 0; i < numWalkers; i++) {
+        for (int i = 0; i < walkers.length; i++) {
             if (walkers[i] == null) {
                 continue;
             }
@@ -51,7 +51,7 @@ void draw() {
 
             boolean stuck = false;
             int nextIndex = -1;
-            for (int j = 0; j < numWalkers + 1; j++) {
+            for (int j = 0; j < root.length; j++) {
                 if (root[j] == null) {
                     nextIndex = j;
                     break;
@@ -75,13 +75,13 @@ void draw() {
     background(0);
 
     // draw walkers
-    for (int i = 0; i < numWalkers; i++) {
+    for (int i = 0; i < walkers.length; i++) {
         if (walkers[i] != null) {
             walkers[i].draw();
         }
     }
 
-    for (int i = 0; i < numWalkers + 1; i++) {
+    for (int i = 0; i < root.length; i++) {
         if (root[i] == null) {
             break;
         }
