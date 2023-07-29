@@ -1,6 +1,6 @@
 # Miscellaneous
 
-A collection of miscellaneous projects. Some of these projects and code were inspired by The Coding Train and The Code Bullet.
+A collection of miscellaneous projects. Some of these projects and code were inspired by and follow the works of The Coding Train and The Code Bullet.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/54029493/193505798-f9983758-b050-4299-8a3f-292be2d33aa0.png">
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/54029493/193505256-9e6f70fd-0017-4803-aeff-ca4f6d353768.jpeg">
